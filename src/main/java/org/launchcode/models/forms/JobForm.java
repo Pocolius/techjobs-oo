@@ -28,6 +28,22 @@ public class JobForm {
         Don't forget to add getters and setters
      */
 
+    private String location;
+
+    @NotNull
+    private int locationId;
+
+    private String coreCompetency;
+
+    @NotNull
+    private int coreCompetencyId;
+
+    private String positionType;
+
+    @NotNull
+    private int positionTypeId;
+
+
     private ArrayList<Employer> employers;
     private ArrayList<Location> locations;
     private ArrayList<CoreCompetency> coreCompetencies;
@@ -42,6 +58,9 @@ public class JobForm {
         */
 
         employers = jobData.getEmployers().findAll();
+        locations = jobData.getLocations().findAll();
+        coreCompetencies = jobData.getCoreCompetencies().findAll();
+        positionTypes = jobData.getPositionTypes().findAll();
 
     }
 
@@ -91,5 +110,53 @@ public class JobForm {
 
     public void setPositionTypes(ArrayList<PositionType> positionTypes) {
         this.positionTypes = positionTypes;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getCoreCompetency() {
+        return coreCompetency;
+    }
+
+    public void setCoreCompetency(String coreCompentency) {
+        this.coreCompetency = coreCompetency;
+    }
+
+    public String getPositionType() {
+        return positionType;
+    }
+
+    public void setPositionType(String positionType) {
+        this.positionType = positionType;
+    }
+
+    public int getLocationId() {
+        return locationId;
+    }
+
+    public void setLocationId(int locationId) {
+        this.locationId = locationId;
+    }
+
+    public int getCoreCompetencyId() {
+        return coreCompetencyId;
+    }
+
+    public void setCoreCompetencyId(int coreCompentencyId) {
+        this.coreCompetencyId = coreCompentencyId;
+    }
+
+    public int getPositionTypeId() {
+        return positionTypeId;
+    }
+
+    public void setPositionTypeId(int positionTypeId) {
+        this.positionTypeId = positionTypeId;
     }
 }
